@@ -26,7 +26,7 @@ public class RNOnePlusOneModule extends ReactContextBaseJavaModule {
   @ReactMethod
   public void getCount(Callback cb) {
     try {
-        cb.invoke(null, this.count);
+        cb.invoke(this.count, null);
     } catch (Exception e){
         cb.invoke(e.toString(), null);
     }
